@@ -12,7 +12,7 @@ We have created a small technical test for you to showcase how you work. Your ta
 
 #### Bonus Points
 
-* Make a persistent data layey using local storagew
+* Make a persistent data layer using local storage
 * Style example with provided UI
 * Implement change of units and language
 
