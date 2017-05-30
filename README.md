@@ -3,7 +3,7 @@ Prometheus is an application to collect and show weather forecast. You are hired
 
 ## Front-end Technical Test
 
-We have created a small technical test for you to showcase how you work. Your task will be to create a small AngularJS 1,x Application that should request weather for user requests locations and show that information to the user.
+We have created a small technical test for you to showcase how you work. Your task will be to create a small AngularJS 1.x Application that should request weather for user requests locations and show that information to the user.
 
 ### Challenges
 
