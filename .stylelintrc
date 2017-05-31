@@ -1,0 +1,36 @@
+{
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "color-named": "never",
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-property-unit-whitelist": {
+      "line-height": ["px"],
+      "font-size": ["px"],
+      "/^animation/": ["s"]
+    },
+    "declaration-no-important": true,
+    "font-family-name-quotes": "always-unless-keyword",
+    "font-family-no-duplicate-names": true,
+    "indentation": 2,
+    "length-zero-no-unit": true,
+    "max-nesting-depth": 2,
+    "number-leading-zero": "always",
+    "number-max-precision": 2,
+    "no-duplicate-selectors": true,
+    "no-extra-semicolons": true,
+    "string-quotes": "double",
+    "unit-blacklist": [["em", "rem", "pt"], {
+      "ignoreProperties": {
+        "em": ["letter-spacing"]
+      }
+    }],
+    "unit-case": "lower",
+    "unit-no-unknown": true
+  }
+}
