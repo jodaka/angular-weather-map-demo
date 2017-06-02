@@ -1,20 +1,28 @@
 # Prometheus
-Prometheus is an application to collect and show weather forecast. You are hired as a new Front-end developer to create and maintain it.
+Prometheus is an application to collect and show weather forecast data for a given location.
 
 ## Front-end Technical Test
+The work required to build Prometheus is representative of the work you will be doing at Draewil. We have created this test for you to showcase how you work. 
 
-We have created a small technical test for you to showcase how you work. Your task will be to create a small AngularJS 1.x Application that should request weather for user requests locations and show that information to the user.
+Your task is to create a small ES2015 AngularJS 1.6.x application to the following requirements:
 
-### Challenges
+* Implement the add new location form. This should save a location to local storage.
+* Implement the location list with each location showing a summary weather forecast.
+* Ensure each location is editable.
+* Ensure each location can be removed from city list.
 
-* Implement cities list and weather detail screen with UX provided.
-* User could request a report for any location (by pointing location on the map).
+#### Bonus points
 
-#### Bonus Points
+* Implement change of language.
+* Implement change of units.
 
-* Make a persistent data layer using local storage
-* Style example with provided UI
-* Implement change of units and language
+#### Project setup
+
+We have setup a simple project to help you get started. Ensure you install all dependencies and then run:
+
+`npm start`
+
+This will run a dev server and setup ES2015 transpiling so you can just start coding.
 
 #### API
 
@@ -99,21 +107,12 @@ us - imperial units
 * https://raw.githubusercontent.com/DraewilTech/interview-assets/master/prometheus-frontend-mainscreen.png
 * https://raw.githubusercontent.com/DraewilTech/interview-assets/master/prometheus-frontend-addlocation.png
 
-### Review
+### Additional Information
 
-We value quality over feature-completeness. We do take into consideration your experience level. The goal of this code sample is to help us identify what you consider production-ready code. 
-The aspects of your code we will assess include:
+We value quality over feature-completeness and we will take into consideration your experience level.
 
-* **Architecture**: how clean is the separation between layers
-* **Correctness**: does the application do what was asked? 
-* **Code quality**: is the code simple, easy to understand, and maintainable? Are there any code smells or other red flags? Does object-oriented code follows principles such as the single responsibility principle? Is the coding style consistent with the language's guidelines? Is it consistent throughout the codebase?
-* **Technical choices**: do choices of libraries, architecture etc. seem appropriate for the chosen application?
+We understand that you’ve probably got a full-time job and a personal life so aim to spend no more than 2 to 3 hours on this test.
 
-
-### Aditional Information
-
-We understand that you’ve probably got a full-time job and a personal life so doing the above test could be definitely finished in a couple of hours.
-
-If you have any questions, email us and we can add it to this readme.
+If you have any questions then please get in touch.
 
 Good luck!

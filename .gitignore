@@ -1,0 +1,7 @@
+temp/
+node_modules/
+dist/
+.idea/
+config/local.yaml
+.DS_Store
+*.log
