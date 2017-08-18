@@ -1,0 +1,18 @@
+{
+    "basePath": "/",
+    "routerNoHash": true,
+    "prometheusApiKey": "c6987ba1fcc7450aea9cff041bb42825",
+    "googleMapsApiKey": "AIzaSyA--Y9_Ln1V1V4Y3Jhbg-gG0XUZ2J3VxbU",
+    "langs": {
+        "list": ["en", "ru"],
+        "default": "en"
+    },
+    "api": {
+        "dict": {
+            "origins": "flights/dictionaries/origins",
+            "details_config": "paxTypes/getDetailsConfig"
+        },
+        "i18n": "translation",
+        "seatmap": "seat/map?productId=%s&segmentId=%s&currency=%s"
+    }
+}

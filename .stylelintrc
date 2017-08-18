@@ -10,14 +10,14 @@
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-trailing-semicolon": "always",
     "declaration-property-unit-whitelist": {
-      "line-height": ["px"],
-      "font-size": ["px"],
+      "line-height": ["px", "rem"],
+      "font-size": ["px","rem"],
       "/^animation/": ["s"]
     },
     "declaration-no-important": true,
     "font-family-name-quotes": "always-unless-keyword",
     "font-family-no-duplicate-names": true,
-    "indentation": 2,
+    "indentation": 4,
     "length-zero-no-unit": true,
     "max-nesting-depth": 2,
     "number-leading-zero": "always",
@@ -25,7 +25,7 @@
     "no-duplicate-selectors": true,
     "no-extra-semicolons": true,
     "string-quotes": "double",
-    "unit-blacklist": [["em", "rem", "pt"], {
+    "unit-blacklist": [["em", "pt"], {
       "ignoreProperties": {
         "em": ["letter-spacing"]
       }

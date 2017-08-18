@@ -1,0 +1,39 @@
+<div class="map">
+
+    <openlayers 
+        ol-center="ctrl.mapCenter" 
+        ol-defaults="ctrl.map"
+        height="400px" 
+        width="100%">
+        <ol-marker ol-marker-properties="ctrl.marker"></ol-marker>
+    </openlayers>
+
+    <div class="map__buttons">
+        
+         <input 
+            class="map__location-name"
+            type="text"    
+            placeholder="{{ ctrl.i18n.locationName }}" 
+            ng-show="ctrl.marker.active" 
+            ng-model="ctrl.marker.name" 
+            />
+
+        <input 
+            class="map__button map__button--cancel"
+            type="button" 
+            value="{{ ctrl.i18n.cancel }}" 
+            ng-click="ctrl.cancel()" />
+        <div class="map__hint"
+            ng-hide="ctrl.marker.active" >
+            {{ ctrl.i18n.tip }}
+        </div>
+        <input 
+            class="map__button map__button--save"
+            type="button"     
+            ng-show="ctrl.marker.active" 
+            value="{{ ctrl.i18n.save }}" 
+            ng-click="ctrl.save()" />
+    </div>
+
+    <pre>{{ ctrl.marker | json }} </pre>
+</div>

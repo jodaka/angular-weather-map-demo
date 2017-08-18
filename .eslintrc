@@ -8,7 +8,7 @@
   },
   "rules": {
     "no-multiple-empty-lines": ["error", {"max": 1}],
-    "indent": ["error", 2, {"MemberExpression": 1}],
+    "indent": ["error", 4, {"MemberExpression": 1}],
     "linebreak-style": ["error", "unix"],
     "array-bracket-spacing": ["error"],
     "block-spacing": ["error"],

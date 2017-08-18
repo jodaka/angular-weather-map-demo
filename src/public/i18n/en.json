@@ -1,0 +1,23 @@
+{
+    "header": {
+        "title": "Prometheus",
+        "motto": "You can add, edit and delete locations"
+    },
+
+    "list": {
+        "edit": "Edit",
+        "del": "Delete",
+        "wind_speed": "Wind speed",
+        "wind_c": "KM/H",
+        "humidity": "Humidity",
+        "add": "Add new location"
+    },
+
+    "add": {
+        "cancel": "Back to list",
+        "save": "Save location",
+        "name": "Location name",
+        "tip": "Click on the map to add location",
+        "locationName": "Enter location name"
+    }
+}

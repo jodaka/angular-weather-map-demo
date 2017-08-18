@@ -1,0 +1,98 @@
+@import "~includes.scss";
+
+.address-list {
+    padding: 0.5rem;
+    height: auto;
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+
+    &__ctrl {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    &__add {
+        @include draewil-button(#ffffff, #000000); 
+    }
+}
+
+.address {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    min-height: 100px;
+
+    &__temperature,
+    &__body,
+    &__ctrl {
+        display: inline-block;
+    }
+
+    &__body {
+        width: 65%;
+        white-space: normal;
+    }
+
+    &__temperature {
+        width: 80px;
+        height: 80px;
+        vertical-align: top;
+
+        line-height: 80px;
+        text-align: center;
+
+        background-color: #00caff;
+        color: #ffffff;
+        margin: 0 0.5rem;
+        
+        z-index: 1;
+        position: relative;
+    }
+
+    &__windBearing {
+        display: inline-block;
+        font-weight: bold;
+        // font-size: 1.1rem;
+        padding: 0 0.5rem;
+    }
+    &__windSpacer {
+        padding: 0 1rem;
+    }
+
+    &__location {
+        font-weight: bold;
+        color: #243342;
+    }
+
+    &__weather {
+        font-size: 0.8rem;
+        color:#929292;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        color: #38393A;
+        height: 30px;
+        line-height: 30px;
+        
+        font-size: 0.8rem;
+        z-index: 0;
+
+        padding-left: 100px;
+        
+    }
+
+    &__edit {
+         @include draewil-button(#ffffff, #00caff); 
+    }
+}
+
+
+
+

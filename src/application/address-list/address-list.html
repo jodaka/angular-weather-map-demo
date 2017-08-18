@@ -1,0 +1,34 @@
+<div class="address-list">
+    <div class="address-list__item address" 
+        ng-repeat="addr in ctrl.list track by $index">
+        <div class="address__temperature">
+            {{ addr.weather.temperature }} ℃
+        </div> 
+
+        <div class="address__body">
+            <div class="address__location">
+                {{ addr.name }} {{ addr | location }}
+            </div>
+            <div class="address__weather">
+                {{ addr.weather.summary }}
+            </div>
+        </div>
+        
+        <div class="address__ctrl">
+            <input class="address__edit" type="button" value="{{ ctrl.i18n.edit }}">
+            <input class="address__edit" type="button" value="╳" ng-click="ctrl.deleteLocation(addr)">
+        </div>
+
+        <div class="address__footer">
+            {{ ctrl.i18n.wind_speed }}
+            <span class="address__windBearing" style="transform: rotate({{ addr.weather.windBearing }}deg)">↑</span> 
+            {{ addr.weather.windSpeed }} {{ ctrl.i18n.wind_c }}
+
+            <span class="address__windSpacer">|</span> {{ ctrl.i18n.humidity }} {{ addr.weather.humidity }}
+        </div>
+
+    </div>
+    <div class="address-list__ctrl">
+        <input class="address-list__add" type="button" value="{{ ctrl.i18n.add }}" ng-click="ctrl.gotoAddAddress()" />
+    </div>
+</div>

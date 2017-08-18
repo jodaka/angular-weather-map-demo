@@ -1,0 +1,17 @@
+$base-fs: 16px;
+$base-padding: 20px;
+$color-header-bg: #498fe1;
+
+@mixin draewil-button($color, $bg) {
+    background-color: $bg;
+    color: $color;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 0.1rem;
+    padding: 0.5rem 1rem;    
+    font-size: 0.9rem;
+    &:hover {
+        text-shadow: 0 0 7px rgba(50, 50, 50, 1);
+        cursor: pointer;
+    }
+}
