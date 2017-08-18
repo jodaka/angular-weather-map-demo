@@ -12,9 +12,20 @@ const folderSrc = path.join(__dirname, 'src')
 const entryIndexJs = path.join(folderSrc, 'application/app.js')
 const fileJsConcatenated = 'scripts/' + packageName + '.js'
 
+const devServerHost = 'localhost'
+const devServerPort = '8822'
+
 module.exports = {
   context: folderSrc,
   devtool: 'inline-source-map',
+  devServer: {
+    host: devServerHost,
+    port: devServerPort,
+    contentBase: './src/public',
+    stats: 'minimal',
+    inline: true,
+    hot: true
+  },
   entry: [
     'babel-polyfill',
     entryIndexJs
@@ -27,15 +38,6 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader?presets[]=es2015'
-          },
-          {
-            loader: 'eslint-loader',
-            options: {
-              emitError: true,
-              emitWarning: true,
-              failOnError: true,
-              failOnWarning: true
-            }
           }
         ]
       },
@@ -65,6 +67,10 @@ module.exports = {
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         loader: 'file-loader?name=fonts/[name].[ext]'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       },
       {
         test: /\.(html)$/,
