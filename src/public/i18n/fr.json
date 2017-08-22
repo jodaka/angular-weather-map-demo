@@ -1,0 +1,21 @@
+{
+    "header": {
+        "title": "Prometheus"
+    },
+    "list": {
+        "headerText": "Vous pouvez ajouter, modifier et supprimer des emplacements",
+        "edit": "Modifier",
+        "del": "Supprimer",
+        "wind_speed": "La vitesse du vent",
+        "wind_c": "KM/H",
+        "humidity": "L'humidité",
+        "add": "Ajouter un nouvel emplacement"
+    },
+    "add": {
+        "cancel": "Retour à la liste",
+        "save": "Emplacement d'enregistrement",
+        "name": "Nom de l'endroit",
+        "tip": "Cliquez sur la carte pour ajouter un emplacement",
+        "locationName": "Entrez l'emplacement de nom"
+    }
+}

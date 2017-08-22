@@ -2,7 +2,13 @@
     <h2 class="header__title">{{:: ctrl.i18n.title }}</h2>
     <h3 class="header__motto">{{:: ctrl.tagline }}</h3>
     <div class="header__toolbar">
-        <!-- <div class="toolbar__button"> search </div>
-        <div class="toolbar__button"> menu </div> -->
+        <select 
+            class="header__lang"
+            ng-model="ctrl.selectedLang"
+            ng-change="ctrl.changeLanguage({value: ctrl.selectedLang})">
+            <option 
+                ng-repeat="lng in ctrl.i18nList track by $index" 
+                value="{{::lng}}">{{:: lng }}</option>
+        </select>
     </div>
 </div>

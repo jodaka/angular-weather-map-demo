@@ -41,6 +41,11 @@ class addressListService {
         return null;
     }
 
+    resetWeather () {
+        this.localStorage.removeItem(this.weatherKeyName);
+        this.getWeather();
+    }
+
     /**
      * Get weather forcast for all saved locations in the list.
      * Once forecast is updated an 'weather-updated' event is emitted

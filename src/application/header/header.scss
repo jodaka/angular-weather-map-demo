@@ -5,7 +5,7 @@
     font-size: $base-fs;
     width: 100%;
     position: relative;
-    color: white;
+    color: ffffff;
     padding: 1rem;
 
     &__title {
@@ -25,6 +25,12 @@
         position: absolute;
         right: 0;
         top: 0;
+    }
+
+    &__lang {
+        position: absolute;
+        right: 10px;
+        top: 20px;
     }
 }
 
