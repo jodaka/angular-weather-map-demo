@@ -1,3 +1,6 @@
+<draewil-header 
+    tagline="ctrl.i18n.headerText">
+</draewil-header>
 <div class="address-list">
     <div class="address-list__item address" 
         ng-repeat="addr in ctrl.list track by $index">
@@ -15,8 +18,16 @@
         </div>
         
         <div class="address__ctrl">
-            <input class="address__edit" type="button" value="{{ ctrl.i18n.edit }}">
-            <input class="address__edit" type="button" value="╳" ng-click="ctrl.deleteLocation(addr)">
+            <input 
+                class="address__edit" 
+                type="button" 
+                value="{{ ctrl.i18n.edit }}"
+                ng-click="ctrl.editLocation(addr)">
+            <input 
+                class="address__edit" 
+                type="button" 
+                value="╳" 
+                ng-click="ctrl.deleteLocation(addr)">
         </div>
 
         <div class="address__footer">

@@ -1,5 +1,5 @@
+<draewil-header tagline="ctrl.i18n.tip"></draewil-header>
 <div class="map">
-
     <openlayers 
         ol-center="ctrl.mapCenter" 
         ol-defaults="ctrl.map"
@@ -17,16 +17,11 @@
             ng-show="ctrl.marker.active" 
             ng-model="ctrl.marker.name" 
             />
-
         <input 
             class="map__button map__button--cancel"
             type="button" 
             value="{{ ctrl.i18n.cancel }}" 
             ng-click="ctrl.cancel()" />
-        <div class="map__hint"
-            ng-hide="ctrl.marker.active" >
-            {{ ctrl.i18n.tip }}
-        </div>
         <input 
             class="map__button map__button--save"
             type="button"     

@@ -13,7 +13,12 @@ class addressListService {
         this.keyName = 'list';
         this.weatherKeyName = 'forecastTimestamp';
 
-        this.defaultList = ['adress1', 'adress2', 'adress3'];
+        this.defaultList = [{
+            lat: 51.50,
+            lon: -0.08429,
+            id: '51.50_-0.08429',
+            name: 'London'
+        }];
         this.list = this.defaultList;
 
         // retrive saved value
@@ -21,6 +26,19 @@ class addressListService {
 
         // update weather forcast
         this.getWeather();
+    }
+
+    /**
+     * Return single location by id
+     * @param {String} id 
+     */
+    getLocationById (id) {
+        for (let index = 0; index < this.list.length; index++) {
+            if (this.list[index].id === id) {
+                return this.list[index];
+            }
+        }
+        return null;
     }
 
     /**
@@ -33,7 +51,6 @@ class addressListService {
     getWeather () {
         let forecastTimestamp = this.localStorage.getItem(this.weatherKeyName);
         if (forecastTimestamp) {
-            console.log('12312', forecastTimestamp);
             // saved forecast timestamp + 30 mins. 
             forecastTimestamp = parseInt(forecastTimestamp, 10) + 30 * 60 * 1000;
             if (forecastTimestamp > Date.now()) {
@@ -86,6 +103,23 @@ class addressListService {
 
     getList () {
         return this.list;
+    }
+
+    /**
+     * Changes address
+     * @param {Location} item 
+     */
+    editItem (item) {
+        this.getWeatherForLocation(item)
+            .finally(() => {
+                const res = [];
+                this.list.forEach((val) => {
+                    res.push((val.id === item.id) ? item : val);
+                });
+                this.list = res;
+                this.store();
+                this.$rootScope.$emit('weather-updated');
+            });
     }
 
     /**

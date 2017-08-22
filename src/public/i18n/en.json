@@ -1,10 +1,9 @@
 {
     "header": {
-        "title": "Prometheus",
-        "motto": "You can add, edit and delete locations"
+        "title": "Prometheus"
     },
-
     "list": {
+        "headerText": "You can add, edit and delete locations",
         "edit": "Edit",
         "del": "Delete",
         "wind_speed": "Wind speed",
@@ -12,7 +11,6 @@
         "humidity": "Humidity",
         "add": "Add new location"
     },
-
     "add": {
         "cancel": "Back to list",
         "save": "Save location",

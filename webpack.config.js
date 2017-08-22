@@ -17,8 +17,6 @@ const jsonconf = require('./src/config/dev.json');
 const devServerHost = 'localhost';
 const devServerPort = '8822';
 
-console.log(path.resolve(__dirname, 'src/application'));
-
 module.exports = {
     context: folderSrc,
     devtool: 'inline-source-map',

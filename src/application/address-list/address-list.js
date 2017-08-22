@@ -8,10 +8,8 @@ class addressListController {
         this.i18n = I18N.getResources('list');
         this.dataSrv = addressListService;
         this.list = addressListService.getList();
-        console.info(123, this.list);
 
         $scope.$on('weather-updated', () => {
-            console.log('got event');
             this.list = addressListService.getList();
         });
     }
@@ -19,6 +17,10 @@ class addressListController {
     deleteLocation (location) {
         this.dataSrv.deleteLocation(location);
         this.list = this.dataSrv.getList();
+    }
+
+    editLocation (location) {
+        this.router.go('app.editAddress', { location: location.id });
     }
 
     gotoAddAddress () {

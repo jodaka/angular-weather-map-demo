@@ -26,11 +26,18 @@ const config = ($stateProvider, $urlRouterProvider, $locationProvider) => {
             component: 'addressList'
         })
         .state('app.addAddress', {
-            url: '/add-address',
+            url: '/map/add',
             params: {
                 params: null
             },
             component: 'addAddress'
+        })
+        .state('app.editAddress', {
+            url: '/map/edit/:location',
+            params: {
+                location: null
+            },
+            component: 'editAddress'
         });
 };
 

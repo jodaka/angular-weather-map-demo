@@ -13,8 +13,8 @@ require('./router')(app);
 // components
 require('./header/header')(app);
 require('./add-address/add-address')(app);
+require('./add-address/edit-address')(app);
 require('./address-list/address-list')(app);
-
 
 // debug info 
 app.config(['$compileProvider', ($compileProvider) => {
