@@ -9,12 +9,9 @@ class Header {
         this.selectedLang = I18N.currentLang;
         this.i18nList = I18N.getAvailableLangsList();
         this.i18nService = i18nService;
-
-        console.log(123, this.i18nList);
     }
 
     changeLanguage () {
-        console.log(2222, this.selectedLang);
         this.i18nService.changeLang(this.selectedLang);
     }
 }
