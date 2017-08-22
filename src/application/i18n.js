@@ -1,10 +1,14 @@
 import CFG from 'cfg';
 import angular from 'angular';
 
+// initial preconfigured lang resources
 let storage = {
     en: require('../public/i18n/en.json')
 };
 
+/**
+ * Some basic i18n stub. Probably should be rewritten as provider and merged with i18n-service
+ */
 class I18nProvider {
     constructor () {
         this.state = {
@@ -28,6 +32,10 @@ class I18nProvider {
         this.storage = storage;
     }
 
+    /**
+     * Returns lang resources for specific key
+     * @param {String} key 
+     */
     getResources (key) {
         if (storage.hasOwnProperty(this.state.currentLang)) {
             if (key && storage[this.state.currentLang][key]) {

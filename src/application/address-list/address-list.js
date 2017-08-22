@@ -9,6 +9,7 @@ class addressListController {
         this.dataSrv = addressListService;
         this.list = addressListService.getList();
 
+        // when weather forecast is updated we need to reload list
         $scope.$on('weather-updated', () => {
             this.list = addressListService.getList();
         });
@@ -39,6 +40,7 @@ module.exports = (app) => {
         controller: ['$state', '$scope', 'addressListService', addressListController]
     });
 
+    // Basic filter that shortens coordinates for display purposes
     app.filter('location', () =>
         location => `${parseFloat(location.lat).toPrecision(4)}, ${parseFloat(location.lon).toPrecision(4)}`
     );

@@ -15,9 +15,9 @@ export default class addAddressController {
         };
 
         this.mapCenter = {
-            lat: 51.505,
-            lon: -0.12,
-            zoom: 8
+            lat: 48.2494,
+            lon: 9.6970,
+            zoom: 4
         };
 
         this.map = {

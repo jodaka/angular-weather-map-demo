@@ -8,8 +8,6 @@ const config = ($stateProvider, $urlRouterProvider, $locationProvider) => {
     $locationProvider.html5Mode(CFG.routerNoHash);
     const currentLang = I18N.currentLang;
 
-    console.info('current lang ', currentLang);
-
     $urlRouterProvider.otherwise(`/${currentLang}/`);
     $urlRouterProvider.when(`/${currentLang}`, `/${currentLang}/`);
 

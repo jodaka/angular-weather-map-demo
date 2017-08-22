@@ -7,6 +7,11 @@ class weatherService {
         this.prometheusApiKey = CFG.prometheusApiKey;
     }
 
+    /**
+     * Load weather forecast from API
+     * @param {*} location 
+     * @param {*} units 
+     */
     getLocationWeather (location, units = 'si') {
         return this.$http({
             url: `https://prometheus-api.draewil.net/${this.prometheusApiKey}/${location.lat},${location.lon}?language=${I18N.currentLang}&units=${units}`,

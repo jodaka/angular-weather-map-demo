@@ -18,6 +18,16 @@ class addressListService {
             lon: -0.08429,
             id: '51.50_-0.08429',
             name: 'London'
+        }, {
+            lat: 51.16,
+            lon: 71.45,
+            id: '51.09_71.33',
+            name: 'Astana'
+        }, {
+            lat: 25.25,
+            lon: 55.30,
+            id: '25.25_55.30',
+            name: 'Dubai'
         }];
         this.list = this.defaultList;
 
@@ -41,6 +51,9 @@ class addressListService {
         return null;
     }
 
+    /**
+     * Basically forces weather forecast to reload
+     */
     resetWeather () {
         this.localStorage.removeItem(this.weatherKeyName);
         this.getWeather();

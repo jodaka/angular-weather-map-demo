@@ -2,13 +2,19 @@ import addAddressController from './add-address-controller';
 
 require('./add-address.scss');
 
+/**
+ * Edit form is basically the same thing as add location form 
+ * with the exception of save method.
+ */
 class editAddressController extends addAddressController {
     constructor ($scope, $state, addressListService, $timeout) {
         super($scope, $state, addressListService, $timeout);
 
+        // here we load location data into marker
         this.marker = addressListService.getLocationById($state.params.location);
         this.marker.active = true;
 
+        // center map around marker and zoom in
         this.mapCenter = {
             lat: this.marker.lat,
             lon: this.marker.lon,

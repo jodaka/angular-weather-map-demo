@@ -8,9 +8,8 @@
     "npm": "3.10.10"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "./node_modules/.bin/webpack",
-    "server": "webpack-dev-server --history-api-fallback --inline --hot --progress --colors --host 0.0.0.0"
+    "start": "webpack-dev-server --history-api-fallback --inline --hot --progress --colors --host 0.0.0.0",
+    "build": "./node_modules/.bin/webpack"
   },
   "dependencies": {
     "angular": "1.6.5",

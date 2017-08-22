@@ -21,15 +21,6 @@ app.config(['$compileProvider', ($compileProvider) => {
     $compileProvider.debugInfoEnabled(true);
 }]);
 
-// some logic for routing
-// TODO FIXME remove this
-app.run(['$window', '$rootScope', '$state', (w, $rootScope, $state) => {
-    $rootScope.$on('state-change', (event, state) => {
-        $state.go(state);
-    });
-}]);
-
-
 const rootNode = document.getElementById('draewil');
 angular.bootstrap(rootNode, ['draewil'], {
     strictDi: true
